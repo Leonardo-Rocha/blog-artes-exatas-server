@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class createPosts1603516007333 implements MigrationInterface {
-  tableName = 'posts';
+export class createTags1603852943557 implements MigrationInterface {
+  tableName = 'tags';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
@@ -17,24 +17,7 @@ export class createPosts1603516007333 implements MigrationInterface {
             generationStrategy: 'increment',
           },
           {
-            name: 'title',
-            type: 'varchar',
-          },
-          {
-            name: 'preview',
-            type: 'text',
-          },
-          {
-            name: 'content',
-            type: 'text',
-          },
-          {
-            name: 'readingTimeInMinutes',
-            type: 'integer',
-            unsigned: true,
-          },
-          {
-            name: 'url',
+            name: 'name',
             type: 'varchar',
           },
           {

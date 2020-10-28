@@ -33,7 +33,8 @@ const oidc = new ExpressOIDC({
 
 routes.use(oidc.router);
 
-routes.use('/admin', oidc.ensureAuthenticated(), adminRouter);
+// routes.use('/admin', oidc.ensureAuthenticated(), adminRouter);
+routes.use('/admin', adminRouter);
 routes.use('/posts', postsRouter);
 
 export default routes;
